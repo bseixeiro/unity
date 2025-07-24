@@ -11,9 +11,9 @@ public class ButtonUI : MonoBehaviour
         Application.Quit();
 
         // Utile pour tester dans l'éditeur
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
     }
 
     public void StartGame()
@@ -30,5 +30,13 @@ public class ButtonUI : MonoBehaviour
 
         // Charge la scène de jeu
         SceneManager.LoadScene("Credits");
+    }
+
+    public void BackToMenu()
+    {
+        Debug.Log("Back to menu");
+
+        // Charge la scène de menu
+        SceneManager.LoadScene("Home");
     }
 }
